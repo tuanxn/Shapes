@@ -10,12 +10,12 @@ using namespace std;
 //int main()
 //{
 //   
-//   Screen canvas = Screen(11, 13);
+//   Screen canvas = Screen(90, 92);
 //
 //   canvas.clear();
 //
+//   Stick_Man test = Stick_Man();
 //
-//   Line test = Line(0, 0, 12, 15);
 //   test.draw(canvas, 'V');
 //   cout << canvas.to_string();
 //
@@ -138,12 +138,12 @@ Stick_Man::Stick_Man(size_t x, size_t y, size_t w, size_t h) {
       this->_h = h;
    }
 
-   _parts.push_back(new Upright_Rectangle(x + 0, y + h / 2, x + w - 1, y + h - 1));
-   _parts.push_back(new Line(x + w / 2, y + h / 2, x + w / 2, y + h / 4));
-   _parts.push_back(new Line(x + w / 2, y + h / 2, x + w / 4, y + h / 4));
-   _parts.push_back(new Line(x + w / 2, y + h / 2, x + 3 * w / 4, y + h / 4));
-   _parts.push_back(new Line(x + w / 2, y + h / 4, x, y));
-   _parts.push_back(new Line(x + w / 2, y + h / 4, x + w - 1, y));
+   _parts.push_back(new Upright_Rectangle(_x + 0, _y + _h / 2, _x + _w - 1, _y + _h - 1));
+   _parts.push_back(new Line(_x + _w / 2, _y + _h / 2, _x + _w / 2, _y + _h / 4));
+   _parts.push_back(new Line(_x + _w / 2, _y + _h / 2, _x + _w / 4, _y + _h / 4));
+   _parts.push_back(new Line(_x + _w / 2, _y + _h / 2, _x + 3 * _w / 4, _y + _h / 4));
+   _parts.push_back(new Line(_x + _w / 2, _y + _h / 4, _x, _y));
+   _parts.push_back(new Line(_x + _w / 2, _y + _h / 4, _x + _w - 1, _y));
 }
 
 bool Stick_Man::draw(Screen& screen, char c) {
